@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Builder
@@ -19,6 +16,7 @@ public class TestEntity2 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id2;
 
+    @Column(length = 10)
     private String name2;
 
     private int age2;
